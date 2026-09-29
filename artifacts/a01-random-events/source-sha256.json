@@ -1,0 +1,298 @@
+[
+  {
+    "path": "docs/API_CONTRACTS.md",
+    "sha256": "3e7bcddc8de7ad554c7364646734d7a576ad34298c1f687114778e15c26d4c53"
+  },
+  {
+    "path": "docs/ARCHITECTURE.md",
+    "sha256": "2023848d1b09354b4a992e3d17f84b0896ad5f6d53f428db03183a690626e2d8"
+  },
+  {
+    "path": "docs/DESIGN_SYSTEM.md",
+    "sha256": "b2ed0f51ec8e000e66ebf35f81ad8418828fe21438cc6d31af3988d644568beb"
+  },
+  {
+    "path": "docs/DEVELOPMENT_CHECKLIST.md",
+    "sha256": "37f79de6aedbdbddabc8055943324cb833c061d9765706ef3d27c11dec4c6cf2"
+  },
+  {
+    "path": "docs/GAME_DESIGN.md",
+    "sha256": "85be7c48ec95c0c020017c46ed3bf2dfb9c401c912e9dfc9aea9418a1c85337d"
+  },
+  {
+    "path": "docs/PROJECT_STATE.md",
+    "sha256": "49b8580fe2ed23e7ccf66deb2251f400116e00e19a64554694da0273cf23cbe3"
+  },
+  {
+    "path": "docs/UI_TARGET.md",
+    "sha256": "262988cab0094d3bd5a98f3299e583e4f9dffb4372cdad9efeee105d7a34fa83"
+  },
+  {
+    "path": "server/app.ts",
+    "sha256": "c6a28f2805b4750fcb304f03e7d7b1bdfaf54673b70a1dbcacf6e6ab4a8b05e0"
+  },
+  {
+    "path": "server/auth.ts",
+    "sha256": "65b5bfcc1384029f7c9dca350df0305ae0372b4a2c5caf78629e04b53c056106"
+  },
+  {
+    "path": "server/character.ts",
+    "sha256": "108985d24f75a48cffdca70308b91f4817365ac00d3c884b52570a92d308fdf2"
+  },
+  {
+    "path": "server/config.test.ts",
+    "sha256": "b6be95dbbd3016d87c1b6d432afe6d732ce18c85e6975e018086685c0ab19c56"
+  },
+  {
+    "path": "server/config.ts",
+    "sha256": "dfe447ebbe5cc03039111c02fa2e625efa142fa59146926a07cb2b997d0952fc"
+  },
+  {
+    "path": "server/database.ts",
+    "sha256": "1287218421278436308283e12ef499df3a661dfdd2ddaae9cbc231926c5c44ac"
+  },
+  {
+    "path": "server/fishBuyer.test.ts",
+    "sha256": "735dc5ae277b797bbc7bcc76827b99923380a48850c4ff7daeb26724f6b7b83b"
+  },
+  {
+    "path": "server/fishBuyer.ts",
+    "sha256": "b011e1ebdc41b0bd008a584b7fd61833e99982454a7c23923c1a3caa9e022288"
+  },
+  {
+    "path": "server/fishing.test.ts",
+    "sha256": "12e8edc782c2447c8c829980abd63ace07c74639d74ee6dbde5a0a378e3c1821"
+  },
+  {
+    "path": "server/fishing.ts",
+    "sha256": "319d35f8abdd0203de46a1fd7ecdbe783d9871bbd0357e72dc615f6aba6b8130"
+  },
+  {
+    "path": "server/fishingCalculation.ts",
+    "sha256": "536af3757976ba30ea0342abc6b7d42b6825346fcd82c9e6883acb5f5cfc5e18"
+  },
+  {
+    "path": "server/fishingConfig.ts",
+    "sha256": "603dc4c51d559deea212679d1f5e89c18453505431aa50ec882a8897031335d3"
+  },
+  {
+    "path": "server/fishingEventIntegration.test.ts",
+    "sha256": "a47859c101783ca5cbc5f920891e275a5f25260e1ca9ce81019b56205ff90254"
+  },
+  {
+    "path": "server/fishingRandomEvents.test.ts",
+    "sha256": "6dccdc8ab20b4e74fd09b1563beac6f2a0dde5ddc1b63cecdfcf83169c5ac60c"
+  },
+  {
+    "path": "server/fishingRandomEvents.ts",
+    "sha256": "e58fa9f013a192187d49e287bc181e0beb7355636a4b904c4ac8c728ce1c8073"
+  },
+  {
+    "path": "server/fishSpecimens.ts",
+    "sha256": "96e38b749b0c850fc51cdf8f4dd7ce2cb7eef7537470a730ee148053f9ae4f04"
+  },
+  {
+    "path": "server/fishWeightFormat.ts",
+    "sha256": "1ca7f6a81581845a131b5e24e9505a491c6e8b5f941273170230292d523a2795"
+  },
+  {
+    "path": "server/gameTime.test.ts",
+    "sha256": "1258352a0adc2e9593b9d9520b0dc7345075d0f549faa2c23d49e5989b7acc37"
+  },
+  {
+    "path": "server/gameTime.ts",
+    "sha256": "b7f5966b00048319e96267a3eb48cd42c8751ac579ad050bcea79d6c6abc30eb"
+  },
+  {
+    "path": "server/index.ts",
+    "sha256": "e0d823a0187b4061918096f4a2b32c2fed42bd7924841b5cdd214b1401dd9ab0"
+  },
+  {
+    "path": "server/inventory.ts",
+    "sha256": "6da5fd49a55db0e2f23a6914008e6ae618f037bc02b3b2adeb7cccff60212a5d"
+  },
+  {
+    "path": "server/inventoryLayout.ts",
+    "sha256": "cbef952eacdf0794ed58278381c8314341646fb50e2e08a562053d5fa226bd15"
+  },
+  {
+    "path": "server/locations.ts",
+    "sha256": "393b3c13acdcce1e00121890384f869b3ba306514ea50b71c4cad05aed7d970d"
+  },
+  {
+    "path": "server/seaState.test.ts",
+    "sha256": "5d9ff90dfff0b119b25c2b48181ae9e8bf61a30f9056025b3b74bac70b771a10"
+  },
+  {
+    "path": "server/seaState.ts",
+    "sha256": "16d6bfcc36462a2b0cdc09f25c4b8b2ba14b25f27df7ddaf2b16dde60dc388a5"
+  },
+  {
+    "path": "server/server.test.ts",
+    "sha256": "324fe7827d5faeec0d9288ebcb8352c21c7fb1e96c41942edba6ebb7e6e327a0"
+  },
+  {
+    "path": "server/worldEvents.test.ts",
+    "sha256": "2539c141db653c1b3e958ad056590621f5491d99a5dd4c2549b151a549dfc5ff"
+  },
+  {
+    "path": "server/worldEvents.ts",
+    "sha256": "1f7229421b729214fbd8ef562734200ed8cbef5cb427363fa0956468e66ca62a"
+  },
+  {
+    "path": "src/App.test.tsx",
+    "sha256": "508a91f8470d6c1011c97beb28da3194986c443e7fa62cef71e2cb1c603797c9"
+  },
+  {
+    "path": "src/App.tsx",
+    "sha256": "cf5b539ed15bc2aaf3ad7f3f23885fc6fd081c575266db765de2ba3db6790d9f"
+  },
+  {
+    "path": "src/audio/cashRegister.test.ts",
+    "sha256": "0af9ccf8032655001656dbe2117a9c34889e3963ad22112da73700ecf5921326"
+  },
+  {
+    "path": "src/audio/cashRegister.ts",
+    "sha256": "408db67afb03a796fe8d6b129c6488454ee2f38fb56772a74f477c0e10d61cfd"
+  },
+  {
+    "path": "src/components/ErrorBoundary.test.tsx",
+    "sha256": "1d71f0e88388a093cb4b872ea101bc3c9dfbc93dcfe8cafef0433f793a907974"
+  },
+  {
+    "path": "src/components/ErrorBoundary.tsx",
+    "sha256": "7629d0342bb9b757ed3ba2baec367c3750bad24af01833dd97b503be373b9317"
+  },
+  {
+    "path": "src/components/FishBuyerPanel.test.tsx",
+    "sha256": "6ecb5a7f0914228fd78ca371d28e2d0d686e7755ff9e2e25e9a83b16130854ef"
+  },
+  {
+    "path": "src/components/FishBuyerPanel.tsx",
+    "sha256": "afcadda4300052ce637c092ab34c76b11abd27ecefd1ed0be96c9944113edcdd"
+  },
+  {
+    "path": "src/components/FishingAdminTools.test.tsx",
+    "sha256": "8742d6caf3fced6dea39f4aa7b803bd9ead61f72e2c267f85828b434f2cf51df"
+  },
+  {
+    "path": "src/components/FishingAdminTools.tsx",
+    "sha256": "1cb62371c9c2a4fe9eefa277689f5c96c0a0873da623affbd0da22a97fcf9e79"
+  },
+  {
+    "path": "src/components/FishingAttempt.test.tsx",
+    "sha256": "856c40a70b192078c25265f06dd0941c777078620fe79bcc6fddb6c59bd82ff5"
+  },
+  {
+    "path": "src/components/FishingAttempt.tsx",
+    "sha256": "c6d908fed20b62558053b258f66de0c468c0b680b57f36afb84158c05ff62359"
+  },
+  {
+    "path": "src/components/FishingAttemptProgress.test.tsx",
+    "sha256": "0e28dac1daf8b6f52c8e593d61794fc777d3a7d148c9cbfe6aa572b47670b333"
+  },
+  {
+    "path": "src/components/FishingAttemptProgress.tsx",
+    "sha256": "fae215d4354634ab82e18fd6d9cf0bebf7c34a024d3e8fd599d75bbd12fd6210"
+  },
+  {
+    "path": "src/components/FishingPanel.test.tsx",
+    "sha256": "262a3e4006dc80ac36729c7f26df98b94bddf13bc4afc0b84b3889752a56b79a"
+  },
+  {
+    "path": "src/components/FishingPanel.tsx",
+    "sha256": "f8c57bce5c5ca7365a9ed8449b764f281eebf8431d162a5f08b2eb7081417000"
+  },
+  {
+    "path": "src/components/InventoryItemDetails.tsx",
+    "sha256": "5d7958c7fcacb0eda051965ae9307bdf47248cf14f87cec6e5dda964f882fba1"
+  },
+  {
+    "path": "src/components/InventoryPanel.test.tsx",
+    "sha256": "989f59c64d7d7c4492e87ba2b7cec242df1cbfd8afcdc9fb1a09ce4960853145"
+  },
+  {
+    "path": "src/components/InventoryPanel.tsx",
+    "sha256": "40cdfa1666bfe0d7589e9e4a4b118f849e2adee2a0c09a3dd685af6534d24562"
+  },
+  {
+    "path": "src/components/locationArtwork.test.ts",
+    "sha256": "4e52af33b89436ef60f48e99823c5e18aed8c39fdde34b1cba73bacbc8eda8d1"
+  },
+  {
+    "path": "src/components/locationArtwork.ts",
+    "sha256": "df9abd2c6981f59902fcd040142a457a2412c65f02fa8db39fe3aa2ac1926754"
+  },
+  {
+    "path": "src/components/LocationsPanel.test.tsx",
+    "sha256": "f90e203bf53ede37620110f65a7431b43e56f2d7d55d951198952396edad9e5d"
+  },
+  {
+    "path": "src/components/LocationsPanel.tsx",
+    "sha256": "5a164409f0d1ed7e23309e9f5be068815d3fd8e53a62d4b9c78052cec0badded"
+  },
+  {
+    "path": "src/components/SceneryImage.test.tsx",
+    "sha256": "273719e63ad80f37a6e9ba0a35032dd65abd0edaef4d00d9b81430534f647d44"
+  },
+  {
+    "path": "src/components/SceneryImage.tsx",
+    "sha256": "642cc91c4f7ffb21c74c2b5ee83184057034fa6a0e9ccfe1ac4bcd62f4b3e9df"
+  },
+  {
+    "path": "src/components/TrophyBadge.tsx",
+    "sha256": "5e7ebb41bb09f4fa11f6148445dbe17ddbbf829ff4250989956269137c487fb7"
+  },
+  {
+    "path": "src/fish-buyer.css",
+    "sha256": "851621534b8f2345be0b316e88b391c5f3bd075ce4e57cbfda8a466dbac1a569"
+  },
+  {
+    "path": "src/fishing-refinement.css",
+    "sha256": "9acc5dd1bac2fb5989584f4bef0bb09288fe33be186d3a868397c1aadf2db5ca"
+  },
+  {
+    "path": "src/fishingAttemptClock.test.ts",
+    "sha256": "118ddc31472dcfa14353c233343c013880a699421b04bb7315a9be2d82f2e52e"
+  },
+  {
+    "path": "src/fishingAttemptClock.ts",
+    "sha256": "f00612f7a5833ef51c3700d536a87c32d8b2cc4790f56f45a3d98800a228f3b5"
+  },
+  {
+    "path": "src/inventory-refinement.css",
+    "sha256": "8628a92fc6e60435e454b465c094777fc06affc5a46c9470cd01001a5874f3d0"
+  },
+  {
+    "path": "src/item-tooltip.css",
+    "sha256": "3f59a021df529be37a2a1325fed37cb5b0ac125d73cd4ef1089b66af057549bd"
+  },
+  {
+    "path": "src/main.tsx",
+    "sha256": "2b917e52ba37a7dc85a473c4b0cff80bae1bfeec4f285dd15d10cd46604dcffa"
+  },
+  {
+    "path": "src/shell-refinement.css",
+    "sha256": "3ad20c75ecca495fdd0c2a01b11e7c11b092df6a28f783c669ec82d0915d5694"
+  },
+  {
+    "path": "src/styles.css",
+    "sha256": "b080c134778b52fe5b4d7eeeee28f0ebc93ede2d959f15844369e0eb49ef54ed"
+  },
+  {
+    "path": "src/test/setup.ts",
+    "sha256": "91a3c8962a0edcb956206a501d943fe99e1c78c6d4d8b5c9a948a3362c75978c"
+  },
+  {
+    "path": "src/trophy-badge.css",
+    "sha256": "b1bc11616812c61e2e21b2e32a51f444a389ed0cfd6f62949426d9cec82c85d5"
+  },
+  {
+    "path": "src/vite-env.d.ts",
+    "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+  },
+  {
+    "path": "src/world-refinement.css",
+    "sha256": "143464c9a2b39767399e0482f90f7dd15a29d86dbc8cf96d6b2fdae78989a577"
+  }
+]

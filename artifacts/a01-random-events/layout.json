@@ -1,0 +1,47 @@
+[
+  {
+    "event": "CAST TOWARD IT",
+    "height": 900,
+    "overflow": 0,
+    "stop": true,
+    "width": 1440
+  },
+  {
+    "event": "CAST TOWARD IT",
+    "height": 768,
+    "overflow": 0,
+    "stop": true,
+    "width": 1366
+  },
+  {
+    "event": "CAST TOWARD IT",
+    "height": 1080,
+    "overflow": 0,
+    "stop": true,
+    "width": 1920
+  },
+  {
+    "event": "CAST TOWARD IT",
+    "height": 720,
+    "overflow": 0,
+    "stop": true,
+    "stopBottom": 704.0056686401367,
+    "width": 1280
+  },
+  {
+    "event": "CAST TOWARD IT",
+    "height": 844,
+    "overflow": 0,
+    "stop": true,
+    "width": 390
+  },
+  {
+    "event": "CAST TOWARD IT",
+    "height": 640,
+    "overflow": 0,
+    "stop": true,
+    "stopBottom": 624.0056686401367,
+    "eventButtonHeight": 43.99147415161133,
+    "width": 320
+  }
+]

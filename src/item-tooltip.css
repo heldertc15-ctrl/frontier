@@ -1,0 +1,227 @@
+.game-shell .inventory-drawer .item-tooltip-inspector,
+.item-tooltip-inspector {
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: 6px;
+}
+
+.inventory-item-tooltip {
+  padding: 14px;
+  color: #edf2f4;
+  background: linear-gradient(145deg, #17212b, #0d141c 80%);
+  border: 1px solid #83929c;
+  border-radius: 6px;
+  box-shadow:
+    inset 0 0 0 2px #28313b,
+    0 5px 14px #080e1440;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.item-tooltip-header {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 32px;
+  gap: 10px;
+  align-items: center;
+}
+
+.item-tooltip-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #526672;
+  border-radius: 4px;
+  background: #25323b;
+  color: #b3ced6;
+}
+
+.item-tooltip-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 3px;
+}
+
+.item-tooltip-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.item-tooltip-title h3 {
+  margin: 0;
+  color: #f4f6f7;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.item-tooltip-category {
+  margin: 3px 0 0;
+  color: #b9c5cf;
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+.item-tooltip-close {
+  align-self: start;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  min-height: 44px;
+  margin: -8px -8px 0 -4px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #c1cdd5;
+  background: transparent;
+  font: inherit;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.item-tooltip-close:hover {
+  border-color: #526672;
+  color: #fff;
+  background: #283640;
+}
+
+.item-tooltip-close:focus-visible,
+.inventory-item-tooltip .button:focus-visible,
+.inventory-item-tooltip .input:focus-visible {
+  outline: 2px solid #b5edf7;
+  outline-offset: 3px;
+}
+
+.item-tooltip-location {
+  margin: 12px 0 0;
+  color: #a9b8c3;
+  font-size: 11px;
+}
+
+.item-tooltip-location.is-equipped,
+.item-tooltip-effect {
+  color: #91de9b;
+}
+
+.item-tooltip-effect {
+  margin: 10px 0 0;
+}
+
+.item-tooltip-flavor {
+  margin: 8px 0 14px;
+  color: #ddc493;
+  font-style: italic;
+}
+
+.item-tooltip-actions,
+.item-tooltip-action-group {
+  display: grid;
+  gap: 7px;
+}
+
+.inventory-item-tooltip .button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: 9px 12px;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+.game-shell .inventory-drawer .inventory-item-tooltip .button.secondary,
+.inventory-item-tooltip .button.secondary {
+  border-color: #506571;
+  color: #d3e0e7;
+  background: #202f39;
+}
+
+.game-shell .inventory-drawer .inventory-item-tooltip .button.secondary:hover:not(:disabled),
+.inventory-item-tooltip .button.secondary:hover:not(:disabled) {
+  border-color: #81adbd;
+  background: #2b424f;
+}
+
+.inventory-item-tooltip .item-tooltip-transfer-toggle {
+  justify-content: space-between;
+}
+
+.item-tooltip-hint {
+  margin: 0;
+  color: #b7c5ce;
+  font-size: 11px;
+}
+
+.item-tooltip-transfer {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #374a58;
+}
+
+.item-tooltip-transfer label {
+  color: #c5d1d9;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.item-tooltip-quantity {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.item-tooltip-quantity .input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+}
+
+.item-tooltip-quantity .button {
+  width: auto;
+  white-space: nowrap;
+}
+
+.inventory-item-tooltip .item-tooltip-warning {
+  color: #f2be9b;
+}
+
+.admin-item-delete {
+  display: grid;
+  gap: 9px;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #79574e;
+  border-radius: 6px;
+  background: #241e20;
+  color: #e9d4cd;
+  font-size: 12px;
+}
+
+.admin-item-delete .eyebrow,
+.admin-item-delete p {
+  margin: 0;
+}
+
+.admin-item-delete .eyebrow {
+  color: #e7a88b;
+}
+
+.admin-item-delete-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.admin-item-delete .button {
+  min-height: 40px;
+  margin: 0;
+}

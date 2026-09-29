@@ -1,0 +1,32 @@
+{
+  "mobileTop": {
+    "doc": [390, 1215],
+    "footer": {
+      "bottom": 1215.1771697998047,
+      "height": 99.26042175292967,
+      "left": 0,
+      "right": 390,
+      "top": 1115.916748046875,
+      "width": 390,
+      "x": 0,
+      "y": 1115.916748046875
+    },
+    "scroll": 0,
+    "viewport": [390, 844]
+  },
+  "mobileControls": {
+    "focus": "Bait: Crab Bait ×99",
+    "footer": {
+      "bottom": 844.0000457763672,
+      "height": 99.26042175292967,
+      "left": 0,
+      "right": 380,
+      "top": 744.7396240234375,
+      "width": 380,
+      "x": 0,
+      "y": 744.7396240234375
+    },
+    "scroll": 365.3333435058594
+  },
+  "behavior": "Footer enters sticky mode only after sufficient activity content is in view; it does not overlap the initial location/conditions header."
+}

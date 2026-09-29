@@ -1,0 +1,489 @@
+.game-shell .location-context.has-buyer .location-body {
+  padding: 0;
+  overflow: hidden;
+}
+.fish-buyer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  color: #eef4f3;
+  background: #1d3039;
+}
+.fish-buyer h4,
+.fish-buyer h5,
+.fish-buyer p {
+  margin: 0;
+}
+.fish-buyer-npc {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 18px 12px;
+  flex: 0 0 auto;
+}
+.fish-buyer-avatar {
+  width: 72px;
+  height: 80px;
+  flex: 0 0 72px;
+  object-fit: cover;
+  border: 1px solid #bc9963;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px #0a1c2470;
+}
+.fish-buyer-kicker {
+  color: #a9c6cc;
+  letter-spacing: 0.13em;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.fish-buyer h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 4px 0;
+  line-height: 1.2;
+}
+.fish-buyer-role {
+  font-size: 12px;
+  color: #dcbe8b;
+}
+.fish-buyer .fish-buyer-dialogue {
+  margin: 0 18px 14px;
+  padding-left: 12px;
+  border-left: 2px solid #b79660;
+  color: #cee0e2;
+  font-size: 12px;
+  line-height: 1.6;
+  flex: 0 0 auto;
+}
+.fish-buyer-content {
+  min-height: 0;
+  flex: 1;
+  padding: 0 16px 18px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.fish-buyer-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1px 0 10px;
+}
+.fish-buyer-section-heading h5 {
+  font-size: 13px;
+}
+.fish-buyer-section-heading > span {
+  color: #a6c4cc;
+  font-size: 12px;
+}
+.fish-buyer-stacks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  margin-bottom: 16px;
+}
+.fish-buyer-stack-choice {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid #49616b;
+  border-radius: 7px;
+  background: #29424c;
+  color: #e8f3f4;
+  padding: 10px 5px 8px;
+  min-width: 0;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+.fish-buyer-stack-choice:hover {
+  background: #365762;
+}
+.fish-buyer-stack-choice.is-selected {
+  border-color: #a7d5df;
+  background: #375662;
+  box-shadow: inset 0 0 0 1px #a7d5df;
+}
+.fish-buyer-stack-choice.has-trophy.is-selected {
+  border-color: #d5b16b;
+  box-shadow: inset 0 0 0 1px #d5b16b;
+  background: #424b42;
+}
+.fish-buyer-stack-choice > img {
+  height: 38px;
+  width: 100%;
+  object-fit: contain;
+  margin: 8px 0 1px;
+}
+.fish-buyer-stack-choice > strong {
+  font-size: 11px;
+  line-height: 1.3;
+  text-align: center;
+}
+.fish-buyer-stack-count {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  color: #c9dee3;
+  font-size: 10px;
+}
+.fish-buyer-stack-price {
+  color: #f6d794;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.fish-buyer-stack-choice .trophy-badge {
+  font-size: 9px;
+  padding: 1px 4px;
+}
+.fish-buyer-stack-choice .trophy-badge svg {
+  width: 10px;
+  height: 10px;
+}
+.fish-buyer-showcase {
+  border: 1px solid #4b6470;
+  border-radius: 8px;
+  padding: 11px 12px 15px;
+  background: radial-gradient(ellipse at 50% 40%, #375862 0%, #203640 75%);
+  text-align: center;
+}
+.fish-buyer-showcase.is-trophy {
+  border-color: #aa874a;
+  background: radial-gradient(ellipse at 50% 35%, #5c604a 0%, #293c3a 70%);
+}
+.fish-buyer-showcase-label {
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.fish-buyer-showcase-label > span:first-child {
+  color: #bdced0;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+.fish-buyer-showcase .trophy-badge {
+  font-size: 10px;
+}
+.fish-buyer-showcase > img {
+  width: 80%;
+  height: 95px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 10px #09191e55);
+}
+.fish-buyer-showcase h5 {
+  font-size: 19px;
+  line-height: 1.3;
+  margin: 0 0 5px;
+}
+.fish-buyer-showcase > p {
+  color: #dbe8e8;
+  font-size: 13px;
+}
+.fish-buyer-showcase > small {
+  display: block;
+  margin-top: 6px;
+  color: #bad0d4;
+  font-size: 10px;
+}
+.fish-buyer-showcase.is-trophy > small {
+  color: #edce95;
+}
+.fish-buyer-selection-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px 8px;
+  margin: 12px 0 6px;
+}
+.fish-buyer-selection-heading > span {
+  color: #c0d5da;
+  font-size: 11px;
+}
+.fish-buyer-selection-heading > div {
+  display: flex;
+  gap: 6px;
+}
+.fish-buyer-selection-heading button {
+  padding: 6px 3px;
+  min-height: 32px;
+  background: transparent;
+  border: 0;
+  color: #aadee9;
+  font-size: 10px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.fish-buyer-specimens {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+.fish-buyer-specimens > button {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr auto;
+  gap: 4px;
+  align-items: center;
+  min-width: 0;
+  min-height: 52px;
+  padding: 10px 9px 9px 25px;
+  color: #d6e8ed;
+  background: #223842;
+  border: 1px solid #4a6572;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 11px;
+}
+.fish-buyer-specimens > button.is-selected {
+  border-color: #83b4c2;
+  background: #34515d;
+}
+.fish-buyer-specimens > button.is-trophy {
+  border-color: #8b774f;
+}
+.fish-buyer-specimens > button.is-trophy.is-selected {
+  border-color: #d4ae65;
+  background: #4a503e;
+}
+.fish-buyer-specimens > button > strong {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.fish-buyer-specimens > button > span:not(.fish-buyer-selection-mark):not(.trophy-badge) {
+  color: #f0d393;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.fish-buyer-selection-mark {
+  position: absolute;
+  left: 7px;
+  top: 11px;
+  color: #bee5e7;
+  font-size: 12px;
+}
+.fish-buyer-specimens .trophy-badge {
+  grid-column: 1 / -1;
+  justify-self: start;
+  font-size: 9px;
+  padding: 1px 4px;
+}
+.fish-buyer-specimens .trophy-badge svg {
+  width: 10px;
+  height: 10px;
+}
+.fish-buyer-footer {
+  flex: 0 0 auto;
+  padding: 12px 16px 16px;
+  border-top: 1px solid #526872;
+  background: #192d36;
+  box-shadow: 0 -8px 20px #0c202833;
+}
+.fish-buyer-offer-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.fish-buyer-offer-total > div {
+  display: grid;
+  gap: 2px;
+}
+.fish-buyer-offer-total span {
+  font-size: 12px;
+  color: #e0ebee;
+}
+.fish-buyer-offer-total small {
+  color: #a5c2cb;
+  font-size: 11px;
+  font-weight: 400;
+}
+.fish-buyer-offer-total > strong {
+  color: #ffda8d;
+  font-size: 30px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+.fish-buyer-offer-total > strong > small {
+  color: #e9c889;
+  font-size: 13px;
+}
+.fish-buyer-footer .button {
+  min-height: 44px;
+}
+.fish-buyer .button.primary {
+  background: #a9cbd0;
+  border-color: #bcdfe4;
+  color: #17313b;
+  font-weight: 700;
+}
+.fish-buyer .button.primary:hover {
+  background: #c6e6e8;
+}
+.fish-buyer .button.primary:disabled {
+  opacity: 0.5;
+}
+.fish-buyer-review {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fish-buyer-footer h5 {
+  font-size: 17px;
+  margin-bottom: 4px;
+  color: #f4dcad;
+}
+.fish-buyer-footer p {
+  color: #bdd0d5;
+  font-size: 11px;
+  margin-bottom: 9px;
+}
+.fish-buyer-confirm-actions {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 8px;
+}
+.fish-buyer-receipt {
+  text-align: center;
+  border: 1px solid #9ca978;
+  border-radius: 9px;
+  padding: 24px 15px;
+  background: radial-gradient(ellipse at 50% 40%, #3e5745, #20373d 70%);
+  animation: buyer-deal-arrive 0.35s ease-out both;
+}
+.fish-buyer-receipt.is-trophy {
+  border-color: #cba35c;
+  background: radial-gradient(ellipse at 50% 40%, #5f5b3f, #24383a 70%);
+}
+.fish-buyer-receipt h5 {
+  margin-top: 5px;
+  font-size: 25px;
+}
+.fish-buyer-receipt > img {
+  width: 85%;
+  height: 135px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 12px #0d2226);
+}
+.fish-buyer-receipt-credits {
+  display: grid;
+  gap: 1px;
+  margin-bottom: 12px !important;
+}
+.fish-buyer-receipt-credits > strong {
+  color: #ffdb8f;
+  font-size: 46px;
+  line-height: 1.2;
+}
+.fish-buyer-receipt-credits > span {
+  color: #e6d5af;
+  font-size: 12px;
+}
+.fish-buyer-receipt > p:not(.fish-buyer-kicker):not(.fish-buyer-receipt-credits) {
+  font-size: 13px;
+  color: #c6dcd9;
+}
+.fish-buyer-receipt > .trophy-badge {
+  margin-top: 9px;
+}
+.fish-buyer-receipt .button {
+  width: 100%;
+  margin-top: 22px;
+  min-height: 44px;
+}
+.fish-buyer-error {
+  border: 1px solid #c58b7b;
+  border-radius: 7px;
+  padding: 11px;
+  margin: 0 0 12px !important;
+  color: #ffd9cb;
+  background: #513b36;
+  font-size: 12px;
+}
+.fish-buyer-loading,
+.fish-buyer-empty {
+  padding: 22px 16px;
+  background: #263f49;
+  border: 1px solid #4a6974;
+  border-radius: 8px;
+  color: #c4dce1;
+  font-size: 13px;
+}
+.fish-buyer-empty h5 {
+  color: #eef6f4;
+  font-size: 19px;
+  margin-bottom: 9px;
+}
+.fish-buyer-empty small {
+  display: block;
+  margin-top: 12px;
+  color: #a9c6cf;
+}
+.fish-buyer-empty .button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 20px;
+}
+.fish-buyer-refresh {
+  margin: 10px 0;
+}
+.fish-buyer button:disabled {
+  cursor: not-allowed;
+}
+@keyframes buyer-deal-arrive {
+  from {
+    opacity: 0.4;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fish-buyer-receipt {
+    animation: none;
+  }
+  .fish-buyer-stack-choice {
+    transition: none;
+  }
+}
+@media (max-width: 760px) {
+  .game-shell .location-context.has-buyer .location-body {
+    overflow: hidden;
+  }
+  .fish-buyer {
+    height: 680px;
+    min-height: 560px;
+    flex: none;
+  }
+}
+@media (max-width: 390px) {
+  .fish-buyer-npc {
+    padding: 14px 12px 10px;
+  }
+  .fish-buyer-content {
+    padding: 0 12px 14px;
+  }
+  .fish-buyer .fish-buyer-dialogue {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .fish-buyer-specimens > button {
+    grid-template-columns: 1fr;
+  }
+  .fish-buyer-footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

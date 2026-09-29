@@ -1,0 +1,7 @@
+node_modules
+dist
+dist-server
+coverage
+package-lock.json
+docs/GAME_DESIGN.md
+docs/DEVELOPMENT_CHECKLIST.md

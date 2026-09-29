@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-server/
+coverage/
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+.env
+.env.local
+*.log
+*.tsbuildinfo
+.DS_Store
+Thumbs.db

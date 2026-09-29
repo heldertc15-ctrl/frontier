@@ -1,0 +1,526 @@
+.property-room .room-canvas {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 43%, #22343d 0%, #16262f 62%, #13222b 100%);
+  touch-action: pan-y;
+}
+
+.property-room .room-canvas.room-yard::before {
+  position: absolute;
+  inset: -24px;
+  background: url('../assets/rooms/yard/yard-day.webp') center / cover no-repeat;
+  filter: blur(20px) brightness(0.52) saturate(0.75);
+  content: '';
+}
+
+.property-room .room-canvas canvas {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.room-render-error,
+.room-loading {
+  position: absolute;
+  inset: 20px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 18px;
+  color: #eef5f6;
+  text-align: center;
+  background: #13242d;
+}
+
+.room-render-error .button,
+.room-loading .button {
+  min-height: 44px;
+}
+
+.property-room .room-feedback {
+  display: block;
+  color: #d3e3e7;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.property-room .room-feedback .places-error {
+  margin: 2px 0 0;
+  color: #ffd4d4;
+}
+
+.room-mobile-toolbar {
+  display: none;
+}
+
+.game-shell .room-context .location-body {
+  gap: 0;
+  padding: 16px 14px;
+  overflow-y: auto;
+  scrollbar-color: #657f89 #23343e;
+}
+
+.room-context .eyebrow {
+  margin: 0;
+  color: #9fb5bf;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+.game-shell .room-context .location-body > h4 {
+  margin: 3px 0 6px;
+  font-size: 19px;
+}
+
+.room-context .room-intro {
+  margin: 0 0 14px;
+  color: #b9cbd1;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.room-context .room-draft,
+.room-context .room-selected,
+.room-context .room-pending {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #46616d;
+  border-radius: 8px;
+  background: #1b2e38;
+}
+
+.room-context .room-selected,
+.room-context .room-pending {
+  margin-bottom: 10px;
+}
+
+.room-context .room-selected-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.room-context .room-selected-summary > div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.room-context .room-selected-summary span:not(.room-item-diagram) {
+  color: #c4d8de;
+  font-size: 12px;
+}
+
+.room-context .room-selected .button,
+.room-context .room-pending .button {
+  min-height: 44px;
+}
+
+.game-shell .room-context .room-build-toggle {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 14px;
+}
+
+.room-context .room-build-menu {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #48616c;
+  border-radius: 7px;
+  background: #172a33;
+}
+
+.room-context .room-build-note {
+  margin: 0 0 3px;
+  color: #b9cbd1;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.room-context .room-build-item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-height: 58px;
+  padding: 6px 0;
+  border-top: 1px solid #344b55;
+}
+
+.room-context .room-build-item > .button {
+  min-width: 52px;
+  min-height: 40px;
+  padding: 5px 9px;
+}
+
+.room-context .room-pending {
+  border-color: #b89867;
+  background: #3b352c;
+}
+
+.room-context .room-pending p {
+  margin: 0;
+  color: #e8ddd0;
+  font-size: 12px;
+}
+
+.room-context .room-draft-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.room-context .room-draft h5 {
+  margin: 1px 0 0;
+  color: #f2f8f8;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.room-context .room-kicker {
+  color: #a7c9d2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.room-context .room-footprint-size {
+  flex: 0 0 auto;
+  padding: 3px 6px;
+  border: 1px solid #455d68;
+  border-radius: 4px;
+  color: #d9eaec;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.room-context .room-draft-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  color: #b9cbd1;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.room-context .room-valid,
+.room-context .room-invalid {
+  margin: 0;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.room-context .room-valid {
+  border: 1px solid #3e655b;
+  color: #c8eee0;
+  background: #233c36;
+}
+
+.room-context .room-invalid {
+  border: 1px solid #b67070;
+  color: #ffe1df;
+  background: #4a2e34;
+}
+
+.room-context .room-nudge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #c6d8dd;
+  font-size: 12px;
+}
+
+.room-context .room-nudge-controls {
+  display: grid;
+  grid-template-columns: repeat(4, 44px);
+  gap: 3px;
+}
+
+.room-context .room-nudge-controls .button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1;
+  color: #d1e3e8;
+  border-color: #48616c;
+  background: #233944;
+}
+
+.room-context .room-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.room-context .room-actions .button {
+  min-width: 0;
+  min-height: 44px;
+  padding: 7px;
+  white-space: normal;
+}
+
+.room-context .room-actions .room-place {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  font-weight: 700;
+}
+
+.game-shell .property-room .button.primary {
+  border-color: #8bc7d4;
+  color: #102b35;
+  background: #8bc7d4;
+}
+
+.game-shell .property-room .button.primary:hover:not(:disabled) {
+  border-color: #a6d9e3;
+  background: #a6d9e3;
+}
+
+.game-shell .room-context .room-rotate,
+.game-shell .room-context .room-cancel {
+  color: #d1e3e8;
+  border-color: #48616c;
+  background: #233944;
+}
+
+.room-context .room-keyboard-hint {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 8px;
+  margin: 0;
+  padding-top: 2px;
+  color: #b9cbd1;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.room-context .room-keyboard-hint > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.room-context .room-keyboard-hint kbd {
+  min-width: 32px;
+  padding: 1px 4px;
+  border: 1px solid #405863;
+  border-radius: 3px;
+  color: #d5e2e7;
+  font: inherit;
+  font-size: 10px;
+  text-align: center;
+  background: #20343e;
+}
+
+.room-context .room-item-list {
+  display: grid;
+  gap: 6px;
+  margin: 17px 0 0;
+}
+
+.room-context .room-item-list h5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 3px;
+  color: #eef5f6;
+  font-size: 13px;
+}
+
+.room-context .room-item-list h5 span {
+  min-width: 21px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  color: #c3d5db;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  background: #304650;
+}
+
+.room-context .room-item-list .muted {
+  margin: 0;
+  padding: 10px;
+  border: 1px dashed #49616c;
+  border-radius: 5px;
+  color: #c8d8dc;
+  font-size: 12px;
+}
+
+.game-shell .room-context .room-item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 16px;
+  align-items: center;
+  justify-content: stretch;
+  justify-items: start;
+  gap: 10px;
+  min-height: 62px;
+  padding: 8px 10px;
+  border: 1px solid #425b67;
+  border-radius: 6px;
+  background: #1e323d;
+  text-align: left;
+  white-space: normal;
+}
+
+.room-context .room-item-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.room-context .room-item-diagram {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 4px;
+  border: 1px solid #3b5662;
+  border-radius: 5px;
+  color: #a8c9d3;
+  background: #172b35;
+}
+
+.room-context .room-item-diagram svg {
+  width: 100%;
+  max-height: 32px;
+  overflow: visible;
+}
+
+.room-context .room-item-diagram polygon {
+  fill: #476672;
+  stroke: #a6c1cb;
+  stroke-width: 0.9;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.room-context .room-item-check {
+  color: #9ab4bf;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.room-context .room-item strong {
+  color: #edf5f6;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.room-context .room-item small {
+  color: #b9cbd1;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.game-shell .room-context .room-item:hover:not(:disabled) {
+  border-color: #7599a7;
+  background: #29424f;
+}
+
+.game-shell .room-context .room-item[aria-pressed='true'] {
+  border-color: #8bc7d4;
+  background: #294752;
+  box-shadow: inset 3px 0 #8bc7d4;
+}
+
+.room-context .room-item[aria-pressed='true'] .room-item-check {
+  color: #bce8ed;
+}
+
+.room-context .room-item[aria-pressed='true'] .room-item-diagram polygon {
+  fill: #6598a6;
+  stroke: #d1e8ef;
+}
+
+.room-context .room-refresh {
+  flex: 0 0 auto;
+  min-height: 44px;
+  margin-top: 12px;
+  color: #bcd0d8;
+  border-color: transparent;
+  background: transparent;
+}
+
+.room-context [tabindex='0']:focus-visible {
+  outline: 2px solid #d9ffe9;
+  outline-offset: -2px;
+}
+
+.game-shell .room-context .button:focus-visible,
+.property-room .room-mobile-toolbar .button:focus-visible {
+  outline: 2px solid #efcd8d;
+  outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+  .game-shell .property-room .world-stage {
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .game-shell .property-room .room-canvas {
+    height: min(70vw, 360px);
+    min-height: 230px;
+  }
+
+  .room-mobile-toolbar {
+    display: grid;
+    gap: 5px;
+    padding: 8px 10px;
+    border-top: 1px solid #4b6974;
+    background: #1c3540;
+  }
+
+  .room-mobile-toolbar > span {
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 12px;
+  }
+
+  .room-mobile-toolbar > .room-valid {
+    color: #d8f9e9;
+  }
+
+  .room-mobile-toolbar > .room-invalid {
+    color: #ffd4d4;
+  }
+
+  .room-mobile-toolbar > div {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 5px;
+  }
+
+  .room-mobile-toolbar .button {
+    min-width: 0;
+    min-height: 44px;
+    padding: 5px;
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  .game-shell .room-context .location-body {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 350px) {
+  .room-context .room-nudge-row {
+    align-items: start;
+    flex-direction: column;
+  }
+}

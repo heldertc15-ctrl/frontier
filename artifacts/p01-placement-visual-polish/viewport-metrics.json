@@ -1,0 +1,37 @@
+[
+  {
+    "canvasWidth": 854,
+    "height": 768,
+    "scrollHeight": 768,
+    "scrollWidth": 1366,
+    "width": 1366
+  },
+  {
+    "canvasWidth": 928,
+    "height": 900,
+    "scrollHeight": 900,
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "canvasWidth": 1408,
+    "height": 1080,
+    "scrollHeight": 1080,
+    "scrollWidth": 1920,
+    "width": 1920
+  },
+  {
+    "canvasWidth": 375,
+    "height": 640,
+    "scrollHeight": 1503,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "canvasWidth": 305,
+    "height": 640,
+    "scrollHeight": 1540,
+    "scrollWidth": 305,
+    "width": 320
+  }
+]

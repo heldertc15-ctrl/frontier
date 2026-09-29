@@ -1,0 +1,21 @@
+.trophy-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: fit-content;
+  padding: 3px 7px;
+  border: 1px solid #b38c47;
+  border-radius: 4px;
+  background: #473b25;
+  color: #ffe1a1;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.trophy-badge svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+}

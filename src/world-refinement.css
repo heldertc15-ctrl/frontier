@@ -1,0 +1,318 @@
+/* A01 shared world frame: one contained scene coordinate space and a separate activity dock. */
+.game-shell .location-atlas {
+  grid-template-columns: minmax(0, 1fr) var(--activity-dock-width, 336px);
+}
+.world-stage {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #101b22;
+}
+.world-location-header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  min-width: 0;
+  min-height: 56px;
+  padding: 6px 12px;
+  border-bottom: 1px solid #405560;
+  background: #1a2b35;
+}
+.world-location-header h3 {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  color: #eef5f6;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+.world-location-header h3:focus-visible {
+  outline: 2px solid #e3bd79;
+  outline-offset: 3px;
+}
+.game-shell .world-location-header .location-back,
+.game-shell .world-location-header .pin-location {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 0 1 auto;
+  width: auto;
+  min-height: 44px;
+  margin: 0;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #c6dce2;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.game-shell .world-location-header .location-back:hover:not(:disabled),
+.game-shell .world-location-header .pin-location:hover:not(:disabled) {
+  border-color: #668895;
+  background: #2e4955;
+  color: #fff;
+}
+.game-shell .world-location-header .pin-location[aria-pressed='true'] {
+  border-color: #71a5b3;
+  background: #2a4753;
+  color: #dbf6fa;
+}
+.game-shell .world-location-header .pin-location[aria-pressed='true'] svg {
+  fill: #70b9ca55;
+}
+.game-shell .world-location-header .pin-location:disabled {
+  color: #a5bbc3;
+  background: transparent;
+  border-color: transparent;
+  opacity: 0.8;
+}
+.location-pin-controls {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 1px;
+}
+.location-pin-details {
+  position: relative;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.location-pin-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 5px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #adcad4;
+  list-style: none;
+  cursor: pointer;
+}
+.location-pin-details summary::-webkit-details-marker {
+  display: none;
+}
+.location-pin-details summary:hover,
+.location-pin-details[open] summary {
+  border-color: #668895;
+  background: #2e4955;
+  color: #fff;
+}
+.location-pin-details summary:focus-visible {
+  outline: 2px solid #e3bd79;
+  outline-offset: 2px;
+}
+.location-pin-popover {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: min(244px, calc(100vw - 24px));
+  padding: 10px 12px;
+  border: 1px solid #678692;
+  border-radius: 4px;
+  background: #233a45;
+  color: #eaf4f6;
+  box-shadow: 0 6px 18px #08131b66;
+}
+.location-pin-popover p {
+  margin: 4px 0 0;
+  color: #c1d5da;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.leaving-pier-note {
+  flex: 1 0 100%;
+  margin: 0 0 3px;
+  color: #b9cbd1;
+  font-size: 12px;
+}
+.game-shell .world-stage .location-art {
+  grid-column: auto;
+  grid-row: auto;
+  margin: 0;
+  background: #101b22;
+}
+.world-stage .scene-stage > img,
+.world-stage .scene-stage .district-cutout {
+  object-fit: contain;
+}
+.world-notices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+  min-height: 40px;
+  padding: 3px 10px;
+  border-top: 1px solid #2d414c;
+  background: #172630;
+}
+.world-notice-copy {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.game-shell .world-notices .places-feedback:not(:empty),
+.game-shell .world-notices .places-error {
+  position: static;
+  max-width: none;
+  margin: 0;
+  padding: 3px 0;
+  border: 0;
+  background: none;
+  color: #b9cbd1;
+  font-size: 12px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.game-shell .world-notices .places-error {
+  color: #ffd1c9;
+}
+.game-shell .world-notices .places-section-heading {
+  position: static;
+  z-index: auto;
+  flex: 0 0 auto;
+  margin: 0;
+}
+.game-shell .world-notices .places-section-heading .button {
+  border-color: transparent;
+  background: transparent;
+  color: #b9cbd1;
+  font-size: 12px;
+}
+.game-shell .world-notices .places-section-heading .button:hover:not(:disabled) {
+  border-color: #668895;
+  background: #2e4955;
+  color: #fff;
+}
+.game-shell .location-body {
+  padding: 12px;
+}
+.game-shell .location-context.has-fishing .location-body {
+  padding: 0;
+  overflow: hidden;
+}
+.game-shell .location-context.has-fishing .fishing-context {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0;
+  border: 0;
+}
+.quick-travel-consequence {
+  margin: 8px 0;
+  color: #6b4e26;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  html:has(.game-shell),
+  body:has(.game-shell) {
+    height: auto;
+    overflow: visible;
+  }
+  .game-shell {
+    height: auto;
+    min-height: 100dvh;
+    grid-template-rows: 48px auto minmax(0, 1fr);
+    overflow: visible;
+  }
+  .game-shell .main-content,
+  .game-shell .locations-panel {
+    height: auto;
+    overflow: visible;
+  }
+  .game-shell .location-atlas {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    flex: none;
+    overflow: visible;
+  }
+  .world-stage {
+    grid-template-rows: auto auto auto;
+    overflow: visible;
+  }
+  .world-location-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0 8px;
+    padding: 6px 10px;
+  }
+  .world-location-header h3 {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 18px;
+  }
+  .game-shell .world-location-header .location-back {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: start;
+    justify-content: flex-start;
+    margin-left: -8px;
+  }
+  .location-pin-controls {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .leaving-pier-note {
+    grid-column: 1 / -1;
+    margin-bottom: 5px;
+  }
+  .game-shell .world-stage .location-art {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 0;
+  }
+  .world-notices {
+    min-height: 44px;
+  }
+  .game-shell .world-notices .places-section-heading .button {
+    min-height: 44px;
+  }
+  .game-shell .location-context {
+    grid-column: 1;
+    grid-row: 2;
+    min-height: 0;
+    border-left: 0;
+    overflow: visible;
+  }
+  .game-shell .location-context.has-fishing {
+    min-height: 440px;
+  }
+  .game-shell .location-body,
+  .game-shell .location-context.has-fishing .location-body,
+  .game-shell .place-card-grid {
+    overflow: visible;
+  }
+  .game-shell .location-context.has-fishing .location-body {
+    min-height: 440px;
+  }
+  .game-shell .map-label {
+    min-height: 30px;
+    max-width: 84px;
+    padding: 3px 5px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .world-location-header {
+    column-gap: 4px;
+  }
+  .game-shell .world-location-header .pin-location {
+    padding-inline: 5px;
+  }
+  .game-shell .map-label {
+    max-width: 70px;
+    font-size: 9px;
+  }
+}

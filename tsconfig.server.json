@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": ".",
+    "outDir": "dist-server",
+    "composite": true,
+    "declaration": true,
+    "sourceMap": true,
+    "types": ["node", "vitest/globals"]
+  },
+  "include": ["server/**/*.ts", "scripts/**/*.ts", "shared/**/*.ts"],
+  "exclude": ["**/*.test.ts"]
+}

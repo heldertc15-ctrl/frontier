@@ -1,0 +1,62 @@
+[
+  {
+    "file": "server/database.ts",
+    "sha256": "5a83784daef065b06b8b713ab063b8b9fd9fee452af7ca31ad23993809946e9b"
+  },
+  {
+    "file": "server/fishing.test.ts",
+    "sha256": "12e8edc782c2447c8c829980abd63ace07c74639d74ee6dbde5a0a378e3c1821"
+  },
+  {
+    "file": "server/fishing.ts",
+    "sha256": "78193cfdf984517cfde8d3fe871491fdb303a47c9330ccaf0a3efec575942b92"
+  },
+  {
+    "file": "server/fishingCalculation.ts",
+    "sha256": "536af3757976ba30ea0342abc6b7d42b6825346fcd82c9e6883acb5f5cfc5e18"
+  },
+  {
+    "file": "server/fishingConfig.ts",
+    "sha256": "41325e1db35b75252002a7903bea9e334b2e7e843b2ce58c1a842b197a8c187c"
+  },
+  {
+    "file": "server/server.test.ts",
+    "sha256": "324fe7827d5faeec0d9288ebcb8352c21c7fb1e96c41942edba6ebb7e6e327a0"
+  },
+  {
+    "file": "src/components/FishingAttempt.test.tsx",
+    "sha256": "856c40a70b192078c25265f06dd0941c777078620fe79bcc6fddb6c59bd82ff5"
+  },
+  {
+    "file": "src/components/FishingAttempt.tsx",
+    "sha256": "fdc3c0afaae1db5bd4a858ad73fd33d66fd613751211025afbc26ca5c9c73305"
+  },
+  {
+    "file": "src/components/FishingAttemptProgress.test.tsx",
+    "sha256": "0e28dac1daf8b6f52c8e593d61794fc777d3a7d148c9cbfe6aa572b47670b333"
+  },
+  {
+    "file": "src/components/FishingAttemptProgress.tsx",
+    "sha256": "fb9cb55e9945c4fcb0859a703cd597350c7c896ab1cbd65b217dbf5b341c1f23"
+  },
+  {
+    "file": "src/components/FishingPanel.test.tsx",
+    "sha256": "1aff6d3826e39147cae2587db8970d2a94dde8405c9e060646a72933fd1462d9"
+  },
+  {
+    "file": "src/components/FishingPanel.tsx",
+    "sha256": "460e0195f802830978f1491804bcecc90d69d5c7d886ea75110afae0e1a272ab"
+  },
+  {
+    "file": "src/fishing-refinement.css",
+    "sha256": "657065eb8c791faae2893e0627c1a81fe7e9c46168045f43c682c223fb9b49ba"
+  },
+  {
+    "file": "src/fishingAttemptClock.test.ts",
+    "sha256": "ab7cc21c798387a90c52e891a0d2513022a18e3c4954367977d1ff0fb538e8a3"
+  },
+  {
+    "file": "src/fishingAttemptClock.ts",
+    "sha256": "e20d78023af4bde175895c0cb7e18580483a21c4756f2a762d8d84fde72dc0a0"
+  }
+]

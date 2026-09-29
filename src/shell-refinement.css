@@ -1,0 +1,575 @@
+/* A01 compact player HUD and navigation. Location and activity layout live separately. */
+.resource-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+.resource-icon-health {
+  color: #f38286;
+}
+.resource-icon-xp {
+  color: #c3a5f0;
+}
+.resource-icon-credits {
+  color: #e7c671;
+}
+.resource-icon-activity {
+  color: #6cc4bd;
+}
+.resource-icon-time {
+  color: #eab476;
+}
+.game-shell .command-icon[data-icon='world'] {
+  color: #77c8db;
+}
+.game-shell .command-icon[data-icon='pack'] {
+  color: #e7c671;
+}
+.game-shell .command-icon[data-icon='pin'] {
+  color: #f09578;
+}
+.game-shell .command-icon[data-icon='atlas'] {
+  color: #c3a5f0;
+}
+.game-shell .command-icon[data-icon='account'] {
+  color: #8dbbc9;
+}
+.game-shell .command-icon[data-icon='tools'] {
+  color: #eab476;
+}
+.game-shell {
+  --game-bar-height: 48px;
+  --character-rail-width: 176px;
+  --activity-dock-width: 336px;
+  grid-template-columns: var(--character-rail-width) minmax(0, 1fr);
+  grid-template-rows: var(--game-bar-height) minmax(0, 1fr);
+}
+
+.game-shell .app-header {
+  height: var(--game-bar-height);
+  gap: 12px;
+  padding-inline: 12px;
+}
+
+.game-shell .brand {
+  flex: 0 0 auto;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.game-shell .brand-mark {
+  width: 26px;
+  height: 26px;
+  font-size: 15px;
+}
+
+.game-shell .top-navigation {
+  flex: 1 1 auto;
+  gap: 3px;
+  font-size: 13px;
+}
+
+.game-shell .top-navigation a,
+.game-shell .top-navigation button {
+  height: 40px;
+  min-height: 40px;
+  padding-inline: 9px;
+  border-radius: 4px;
+}
+
+.profile-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #c0d0d6;
+  font-size: 12px;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.profile-trigger:hover,
+.profile-trigger[aria-current='page'] {
+  background: #304b58;
+  border-color: #557987;
+  color: #fff;
+}
+
+.profile-trigger:focus-visible {
+  outline: 2px solid #a8e5ec;
+  outline-offset: 2px;
+}
+
+.game-shell .server-status {
+  margin: 0;
+  font-size: 12px;
+  color: #e5cdaf;
+}
+
+.game-shell .character-sidebar {
+  padding: 14px 12px;
+  gap: 14px;
+}
+
+.game-shell .character-sidebar .identity {
+  align-items: center;
+  gap: 9px;
+}
+
+.game-shell .identity h2 {
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.game-shell .portrait-placeholder {
+  width: 36px;
+  height: 40px;
+  flex-basis: 36px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.game-shell .identity .identity-level {
+  display: block;
+  margin-top: 2px;
+  color: #c3d2d7;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.game-shell .character-sidebar .character-resources {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.game-shell .character-sidebar dl.character-resources > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 6px;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #40525c;
+}
+
+.game-shell .character-sidebar .character-resources dt {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #b9cbd1;
+}
+
+.game-shell .character-sidebar .character-resources dd {
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.game-shell .character-sidebar .character-resources > .health-stat {
+  display: block;
+  padding-top: 0;
+}
+
+.game-shell .character-sidebar .health-summary {
+  display: block;
+  margin-top: 8px;
+}
+
+.game-shell .health-summary progress {
+  height: 6px;
+  border-radius: 2px;
+}
+
+.game-shell .health-summary progress::-webkit-progress-bar {
+  background: #162933;
+}
+
+.game-shell .health-summary progress::-webkit-progress-value {
+  background: #70b9ca;
+}
+
+.game-shell .health-summary progress::-moz-progress-bar {
+  background: #70b9ca;
+}
+
+.game-shell .character-sidebar .character-resources .hud-credits {
+  gap: 4px;
+}
+
+.game-shell .character-sidebar .hud-credits dd {
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.game-shell .character-sidebar .hud-activity dd {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.activity-state-mark {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border: 1px solid #9fb6bf;
+  border-radius: 50%;
+}
+
+.activity-state-mark.is-active {
+  border-color: #99d7e5;
+  background: #99d7e5;
+}
+
+.game-shell .character-sidebar .character-resources > .hud-frontier-time {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  border: 0;
+  padding-bottom: 0;
+}
+
+.game-shell .hud-frontier-time dd {
+  white-space: nowrap;
+}
+
+.game-shell .hud-pack-button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 0;
+  padding: 8px;
+  border: 1px solid #597782;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #2b424e;
+}
+
+.game-shell .hud-pack-button:hover {
+  background: #355562;
+}
+
+.hud-pack-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.game-shell .hud-pack-button span:last-child {
+  display: inline-flex;
+  white-space: nowrap;
+  color: #e1edf0;
+}
+
+.fishing-sound-controls {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.fishing-sound-controls legend {
+  padding: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fishing-sound-controls label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  font-size: 12px;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.fishing-sound-controls input {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #73c5d6;
+}
+
+.fishing-sound-controls p {
+  margin: 6px 0 0;
+  color: #53636c;
+  font-size: 12px;
+}
+
+.game-shell .character-sidebar .fishing-sound-controls {
+  padding-top: 11px;
+  border-top: 1px solid #40525c;
+  color: #dbe9ec;
+}
+
+.game-shell .character-sidebar .fishing-sound-controls legend {
+  color: #9fd7e3;
+}
+
+.account-drawer .fishing-sound-controls {
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid #b8c7ca;
+  border-radius: 6px;
+  background: #f2f5f1;
+}
+
+.account-drawer .fishing-sound-controls legend {
+  color: #285e72;
+}
+
+@media (min-width: 1101px) {
+  .account-drawer .fishing-sound-controls {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .game-shell .character-sidebar .fishing-sound-controls {
+    display: none;
+  }
+}
+
+.account-handle {
+  font-size: 13px;
+}
+
+.account-drawer .fishing-tools-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+}
+
+.account-drawer .nav-admin-label {
+  padding: 1px 4px;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 1100px) {
+  .game-shell {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: var(--game-bar-height) auto minmax(0, 1fr);
+    grid-template-areas: 'header' 'sidebar' 'main';
+  }
+
+  .game-shell .app-header {
+    flex-wrap: nowrap;
+  }
+
+  .game-shell .top-navigation {
+    order: initial;
+    width: auto;
+  }
+
+  .game-shell .character-sidebar {
+    display: grid;
+    grid-template-columns: minmax(130px, 1fr) minmax(0, 3.5fr) auto;
+    align-items: center;
+    gap: 16px;
+    padding: 9px 12px;
+    overflow: visible;
+    border: 0;
+    border-bottom: 1px solid #405560;
+  }
+
+  .game-shell .character-sidebar .character-resources {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(108px, 1.2fr);
+    gap: 12px;
+  }
+
+  .game-shell .character-sidebar dl.character-resources > div,
+  .game-shell .character-sidebar .character-resources > .health-stat,
+  .game-shell .character-sidebar .character-resources > .hud-frontier-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3px;
+    border: 0;
+    padding: 0;
+  }
+
+  .game-shell .character-sidebar .character-resources dd {
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .game-shell .character-sidebar .health-summary {
+    margin-top: 5px;
+  }
+
+  .game-shell .character-sidebar .identity h2 {
+    font-size: 14px;
+  }
+
+  .game-shell .hud-pack-button {
+    width: auto;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .game-shell .character-sidebar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 14px;
+  }
+
+  .game-shell .character-sidebar .identity {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .game-shell .character-sidebar .character-resources {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    padding-top: 8px;
+    border-top: 1px solid #405560;
+  }
+
+  .game-shell .hud-pack-button {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .game-shell .app-header {
+    gap: 4px;
+    padding-inline: 8px;
+  }
+
+  .game-shell .brand {
+    display: flex;
+  }
+
+  .game-shell .brand-mark {
+    display: grid;
+    width: 24px;
+    height: 24px;
+  }
+
+  .game-shell .brand-label,
+  .game-shell .profile-trigger > span {
+    display: none;
+  }
+
+  .game-shell .top-navigation {
+    gap: 0;
+    justify-content: flex-start;
+    font-size: 12px;
+  }
+
+  .game-shell .top-navigation a,
+  .game-shell .top-navigation button {
+    min-width: 44px;
+    min-height: 44px;
+    padding-inline: 5px;
+    justify-content: center;
+  }
+
+  .game-shell .top-navigation a > .command-icon,
+  .game-shell .top-navigation button > .command-icon {
+    display: none;
+  }
+
+  .game-shell .top-navigation a > span:last-child,
+  .game-shell .top-navigation button > span:last-child {
+    display: inline;
+  }
+
+  .game-shell .top-navigation a[aria-label='Quick Travel'] > .command-icon {
+    display: block;
+  }
+
+  .game-shell .top-navigation a[aria-label='Quick Travel'] > span:not(.quick-travel-count) {
+    display: none;
+  }
+
+  .game-shell .profile-trigger {
+    min-width: 44px;
+    padding-inline: 5px;
+  }
+
+  .game-shell .server-status {
+    position: absolute;
+    top: var(--game-bar-height);
+    right: 8px;
+    z-index: 6;
+    gap: 5px;
+    max-width: calc(100vw - 16px);
+    padding: 4px 8px;
+    border: 1px solid #a78a66;
+    border-radius: 3px;
+    background: #24343e;
+  }
+
+  .game-shell .character-sidebar {
+    padding: 8px 12px;
+  }
+
+  .game-shell .character-sidebar .identity .identity-level {
+    display: block;
+  }
+
+  .game-shell .character-sidebar .character-resources {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: 9px 16px;
+  }
+
+  .game-shell .character-sidebar .character-resources > .hud-frontier-time {
+    grid-column: 2 / -1;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .game-shell .character-sidebar .character-resources > .hud-activity {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .game-shell .character-resources .hud-activity dt {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .game-shell .character-sidebar .character-resources {
+    gap: 8px;
+  }
+
+  .game-shell .character-resources .hud-frontier-time dt {
+    font-size: 11px;
+  }
+}
